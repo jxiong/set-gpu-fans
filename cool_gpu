@@ -65,7 +65,7 @@ fi
 echo "Setting fan to $speed%"
 
 # command to set fan speed on primary GPU.
-nvscmd="${set} -a [gpu:0]/GPUFanControlState=1 -a [fan:0]/GPUCurrentFanSpeed=$speed"
+nvscmd="${set} -a [gpu:0]/GPUFanControlState=1 -a [fan:0]/GPUTargetFanSpeed=$speed"
 
 # go back to automatic, if called with stop argument
 if [ "x$1" = "xstop" ]
